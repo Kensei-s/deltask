@@ -1,0 +1,32 @@
+# ─── Ignorer tous les fichiers .env & .env.* partout ───────────────────────
+**/.env
+**/.env.*
+
+
+# ─── Node modules (tous niveaux) ──────────────────────────────────────────
+node_modules/
+**/node_modules/
+
+# ─── Builds / Outputs ─────────────────────────────────────────────────────
+dist/
+build/
+**/dist/
+**/build/
+.vite/
+.cache/
+
+# ─── TypeScript cache ────────────────────────────────────────────────────
+*.tsbuildinfo
+
+# ─── Logs ─────────────────────────────────────────────────────────────────
+npm-debug.log*
+yarn-debug.log*
+
+# ─── IDE & OS ─────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# ─── Autres fichiers temporaires ──────────────────────────────────────────
+*.swp
