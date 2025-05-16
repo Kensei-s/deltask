@@ -8,6 +8,7 @@ import Register from './pages/Register';
 import Profile from './pages/Profile';
 import NotFound from './pages/NotFound';
 import Dashboard from './pages/Dashboard';
+import WorkspaceDetail from './pages/WorkspaceDetail'; 
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="workspaces/:id" element={<WorkspaceDetail />} />
 
           {/* Route pour tout ce qui ne matche pas : page 404 */}
           <Route path="*" element={<NotFound />} />

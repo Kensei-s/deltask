@@ -1,9 +1,12 @@
 // src/index.ts
+import 'dotenv/config'  
 import express, { Request, Response, NextFunction } from 'express'
 import cors from 'cors'
 import helmet from 'helmet'
 import morgan from 'morgan'
 import authRoutes from './routes/authRoutes'
+import workspaceRoutes from './routes/workspaceRoutes'
+import { connectDb } from './db'
 
 
 // Si tu as créé d’autres routes, pense à ajouter aussi .ts :
@@ -31,6 +34,7 @@ app.get('/', (_req: Request, res: Response) => {
 
 // ─── ROUTES D’AUTHENTIFICATION ──────────────────────────────────────────────────
 app.use('/auth', authRoutes)
+app.use('/workspaces', workspaceRoutes)
 
 // ─── MIDDLEWARE DE GESTION D’ERREUR ───────────────────────────────────────────────
 app.use(
@@ -44,3 +48,4 @@ app.use(
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`)
 })
+connectDb()
